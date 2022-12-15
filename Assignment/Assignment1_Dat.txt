@@ -1,0 +1,83 @@
+#Student Name: Dat #ID: 100886108
+
+############## Program 1: Table.py ##############
+
+print("a", "b", "a ** b")
+
+b = 2
+for a in range(1, 6):
+    print(a, b , a**b)
+    b += 1
+
+############## End ##############
+
+
+
+############## Program 2: SumOfDigits.py ##############
+
+n = int(input("Enter a number between 0 and 1000: "))
+
+Sum = 0
+while n > 0:
+    LastDigit = n % 10
+    n = n // 10
+    Sum += LastDigit
+
+print("The sum of the digits:", Sum)
+
+############## End ##############
+
+
+
+
+############## Program 3: NumYearsDay.py ##############
+
+minutes = int(input("Enter the number of minutes: "))
+years = minutes // 525600
+days = (minutes - (years * 525600)) // 1440  
+
+print("{} minutes os approximately {} years and {} days".format(minutes, years, days))
+
+############## End ##############
+
+
+
+############## Program 4: Health.py ##############
+
+weight = float(input("Enter weight in pounds: ")) * 0.45359237
+height = float(input("Enter height in inches: ")) * 0.0254
+print("BMI is:", weight/height**2)
+
+############## End ##############
+
+
+
+############## Program 5: Payroll.py ##############
+
+name = input("Enter employee's name: ")
+HoursWorkedaWeek = int(input("Enter number of hours worked in a week: "))
+HourlyPayRate = float(input("Enter hourly pay rate: "))
+ftwhr = float(input("Enter federal tax withholding rate: "))
+stwhr = float(input("Enter state tax withholding rate: "))
+
+GrossPay = HoursWorkedaWeek * HourlyPayRate
+ftwh = GrossPay * ftwhr
+stwh = GrossPay * stwhr
+TotalTaxes = ftwh + stwh
+NetPay = GrossPay - TotalTaxes
+print("#################################")
+
+print("\n\nEmployee Name:",name)
+print("Hours Worked:", HoursWorkedaWeek)
+print("Pay Rate: $"+ str(HourlyPayRate))
+print("Gorss pay: $" + str(GrossPay))
+print("Deductions:")
+print(" Federal Withholding (" +  str(ftwhr*100) + "%): $" +  str(ftwh))
+print(" State Withholding (" +  str(stwhr*100) + "%): $" + str(stwh))
+print(" Total Deduction: %" + str(TotalTaxes))
+print("Net Pay: $" + str(NetPay))
+
+############## End ##############
+
+
+
